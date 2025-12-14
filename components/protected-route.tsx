@@ -35,7 +35,7 @@ export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) 
 
     const currentPath = typeof window !== 'undefined' ? window.location.pathname : 'unknown'
     const isAdminPath = currentPath.startsWith('/admin')
-    
+
     // If user's role doesn't match allowed roles
     if (!allowedRoles.includes(user.role)) {
       // Special case: If trying to access admin page but role is customer,
@@ -56,7 +56,7 @@ export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) 
         })
         return
       }
-      
+
       // Determine target path based on user's actual role
       let targetPath = "/"
       
@@ -88,7 +88,7 @@ export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) 
   if (isLoadingSession || isRedirecting) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-slate-950">
-          <div className="text-center">
+        <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 dark:border-blue-400 mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-muted-foreground">
             {isRedirecting ? 'Redirecting to your dashboard...' : 'Loading...'}

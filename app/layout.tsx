@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: "Secure banking platform for customers, tellers, and administrators",
   icons: {
     icon: [
-      { url: "/bank-logo.png", type: "image/png" },
-      { url: "/bank-logo.svg", type: "image/svg+xml" },
-      { url: "/bank-logo.jpg", type: "image/jpeg" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-dark-32x32.png", type: "image/png" },
+      { url: "/icon-light-32x32.png", type: "image/png" },
     ],
     shortcut: "/icon.svg",
-    apple: "/bank-logo.png",
+    apple: "/apple-icon.png",
   },
 }
 
